@@ -6,28 +6,28 @@ import (
 
 var ErrCantDivideByZero = errors.New("can't divide by zero")
 
-func Sum(i ...int) (int, error) {
+func Sum(i ...int) int {
 	total := 0
 	for _, v := range i {
 		total += v
 	}
-	return total, nil
+	return total
 }
 
-func Subtract(i ...int) (int, error) {
+func Subtract(i ...int) int {
 	total := 0
 	for _, v := range i {
 		total = total - v
 	}
-	return total, nil
+	return total
 }
 
-func Multiply(i ...int) (int, error) {
+func Multiply(i ...int) int {
 	total := 1
 	for _, v := range i {
 		total *= v
 	}
-	return total, nil
+	return total
 }
 
 func Divide(i ...int) (int, error) {

@@ -13,11 +13,7 @@ func TestSumSuccess(t *testing.T) {
 	}
 
 	for _, c := range cases {
-		result, err := Sum(c.values...)
-
-		if err != nil {
-			t.Errorf("expected no error, got: %v", err)
-		}
+		result := Sum(c.values...)
 
 		if result != c.result {
 			t.Errorf("got: %d, expected: %d", result, c.result)
@@ -36,11 +32,7 @@ func TestSubtractSuccess(t *testing.T) {
 	}
 
 	for _, c := range cases {
-		result, err := Subtract(c.values...)
-
-		if err != nil {
-			t.Errorf("expected no error, got: %v", err)
-		}
+		result := Subtract(c.values...)
 
 		if result != c.result {
 			t.Errorf("got: %d, expected: %d", result, c.result)
@@ -60,11 +52,7 @@ func TestMultiplySuccess(t *testing.T) {
 	}
 
 	for _, c := range cases {
-		result, err := Multiply(c.values...)
-
-		if err != nil {
-			t.Errorf("expected no error, got: %v", err)
-		}
+		result := Multiply(c.values...)
 
 		if result != c.result {
 			t.Errorf("got: %d, expected: %d", result, c.result)
